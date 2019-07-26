@@ -16,6 +16,7 @@ module.exports = {
         res.status(200).json(product);
     },
 
+
     getProductById: async (req, res, next) => {
         const product = await Product.findById(req.value.params.productId);
         res.status(200).json(product);

@@ -5,9 +5,9 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const app = express();
 var cors = require('cors')
-
+const connstr='mongodb+srv://bluestoneapp:LPmFgJGcA3OYAWKA@cluster0-c8isl.mongodb.net/test?retryWrites=true&w=majority';
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/bluestoneapp');
+mongoose.connect(connstr, {useNewUrlParser:true});
 
 app.use(helmet());
 app.use(cors());
@@ -40,4 +40,3 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 8981
 app.listen(PORT, () => console.info(`Started on port ${PORT}`));
-
