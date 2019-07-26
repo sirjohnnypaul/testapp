@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Add from './components/Add';
 import Details from './components/Details';
 
+
 function App() {
   return (
     <BrowserRouter>
