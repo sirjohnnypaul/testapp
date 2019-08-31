@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const app = express();
 var cors = require('cors')
-const connstr='mongodb+srv://bluestoneapp:LPmFgJGcA3OYAWKA@cluster0-c8isl.mongodb.net/test?retryWrites=true&w=majority';
+const connstr='';
 mongoose.Promise = global.Promise;
 mongoose.connect(connstr, {useNewUrlParser:true});
 
